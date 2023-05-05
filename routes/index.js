@@ -5,6 +5,6 @@ router.use('/student',require('./studentRoute'));
 
 //api testing
 router.get('/ping',(req,res)=>{
-    res.send('pong');
+    res.status(200).json({data:"pong"});
 })
 module.exports = router;

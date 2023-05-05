@@ -3,6 +3,7 @@ const Student = require('../models/student');
 module.exports.createStudent = async (req, res) => {
   try {
     const user = await Student.create(req.body);
+    //await new Student(req.body).save();
     if (user) {
       return res.status(201).json(user);
     } else {
